@@ -1,9 +1,9 @@
 import React from 'react';
 import ListElement from './ListElement.jsx';
 
-const List = ({students}) => (
+const List = ({students, getStudents}) => (
   <div>
-    {students.map((student, i) => <ListElement student={student} key={`student-entry-${i}`}/>)}
+    {students.map((student, i) => <ListElement student={student} key={`student-entry-${i}`} getStudents={getStudents}/>)}
   </div>
 );
 

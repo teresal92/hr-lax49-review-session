@@ -45,22 +45,22 @@ export default class App extends React.Component {
     if (this.state.page === 'add'){
       return (
         <div>
-          <button value='home'>Back</button>
-          <Add />
+          <button value='home' onClick={this.changepage}>Back</button>
+          <Add getStudents={this.getStudents}/>
         </div>
       )
     } else if (this.state.page === 'list'){
       return (
         <div>
-          <button value='home'>Back</button>
-          <List students={this.state.studentlist}/>
+          <button value='home' onClick={this.changepage}>Back</button>
+          <List students={this.state.studentlist} getStudents={this.getStudents} />
         </div>
       )
     } else if (this.state.page === 'random'){
       return (
         <div>
-          <button value='home'>Back</button>
-          <Random />
+          <button value='home' onClick={this.changepage}>Back</button>
+          <Random students={this.state.studentlist}/>
         </div>
       )
     } else {
